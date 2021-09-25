@@ -1,0 +1,295 @@
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PAGINA WEB</title>
+   
+   <style>/*se puede hacer el codigo css dentro de html con esta etiqueta style aunque no es recomendable*/
+ 
+    .titulo{        /*se llama a la clase colocando un punto(.), lo que colocquemos dentro de las llaves va aplicarse en el titulo que está entre el  <h1> */
+     
+       text-align: center;  /*colocamos esta etiqueta para centrar el texto*/
+
+
+      }
+
+    header{
+       
+      background-color: purple; /*con esta elemento damos color de fondo a header*/
+      color:honeydew;/*utilizamos este elemento para dar color blanco a la letra de header del encabezado*/
+        
+      }
+
+      main{    /*todo lo que colocamos entre la etiqueta main afecta a todo*/
+
+      
+      background-color: teal;/* le colocamos color de fondo*/ 
+      text-align: center;      /*con esta etiqueta centramos el texto*/
+      margin:auto;  /*con el margin auto me permite que los objetos que esten adentro estén centrados, sino lo pusieramos los objetos se verían  en el margen izquierdo */
+       }
+
+       footer{
+
+         background-color: antiquewhite;
+         
+      
+        
+           }
+
+        
+      
+        
+    .foto_producto{     /*para que las fotos se pongan una al lado de la otra le daremos un ancho whidth y heigth un alto */
+   
+      width: 200px;
+     
+     padding: 20px 20px 20px 20px;/*se coloca esta instrución para que el padding se realize en el sentido de las agujas del reloj aplicandose a todos los lados de la foto*/
+                                  /*las fotos no salen de la página web ya que no superan el tamaño de ancho que le dimos a <main> */
+                /*con el punto.  puedo llamar a la clase contenedor y ejecutar */
+      }
+         /*tiene que declarase contenedor para que todo lo que esta dentro del mismo se pueda adaptar segun el dispostivo que se está utilizando*/
+         .contenedor{ 
+         display:flex;  /*esta etiqueta se utiliza para que la pagina sea reponsive las imagenes se pusieron una al lado de la otra*/
+      }
+      /*los @media pueden afectar la pantalla le damos un ancho maximo de 500px debajo de @media colocamos lo que se quiere cambiar o afectar*/
+        @media (max-width: 600px){ /* cuando el ancho sea menor a 600 px va afectar a contenedor*/  
+       
+         .contenedor{    /*contenedor se verá afectado, el contenedor que tiene el elemento flex-direction: columm; debe colocarse dentro de las llaves de los@media query*/
+
+          flex-direction: column;/* este elemento tiene como función que las imagenes se colocan una arriba de la otra en columnas cuando el @media query se aplica-  */
+
+       }
+      }
+     /*.producto3{  /*para llamar a la clase producto le ponemos .producto2*/
+
+        /* padding: 64px;le ponemos 4em porque es una medida grande que es igual a 64 px, para cambiar el padding, ojo debe colocarse fuera de las llaves del media query*/
+       /* padding-left: 40px;/*hacia la izquierda*/
+       /* padding-right: 80px; /*hacia la derecha */
+       /* padding-top: 100px; /*significa la parte superior o arriba lo utilizamos para que sea mas notorio*/
+       /* padding-bottom: 200px;/*significa abajo*/ /*estos padding encapsulan al producto */
+       /*todo lo que comentamos si bien se puede usar es cansador y trabajoso es mejor usar un padding a secas*/
+        /* padding: 20px 20px 20px 20px;  /*es una manera mas eficiente realizar el padding se sigue las agujas del reloj, da 200*/
+                                    /*cuando aplico este padding al producto2 la imagen se separa del resto */
+                                       /*cuando aplico este padding a producto la fotos quedan unidas */
+
+
+           /*padding:  20px 20px; /*cuando colocamos solo dos medidas la primera significa que se aplica arriba y abajo y la segunda significa que se aplica a la derecha y a la izquierda*/  
+           /*:20px 200px;/*en este caso al colocar 200px a la derecha y a la izquierda el resto de las fotos sale porque le habiamos dado una determinada característica al main y el padding que dimos es mayor y saca las fotos de la pagina*/
+         
+         
+
+      .producto{
+        /* margin: top -80px;/*colocamos -80px para que suba el producto*/
+         background-color:cyan;/*le colocamos este color de fondo para que se aprecie mejor el cambio*/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+         padding:  20px 20px;
+
+
+           }
+
+       .tamaño_redes_sociales{  /*llamamos a esta clase para poder disminuir el tamaño de los logos de redes sociales*//*le asignamos un ancho y un padding para que reduzca su tamaño*/
+        width: 100px;
+       padding: 20px;
+      
+      }
+       
+
+      .redes_sociales{     
+    
+           display:flex;
+       }
+     .tamaño_redes_sociales{
+      width: 100px;
+       padding: 20px; 
+     }
+
+
+
+     .tienda_stgo{
+
+        display: flex ; /*colocamos esta etiqueta que permite que se pongan una al lado del otro texto y el mapa d*/
+     }
+       
+   .texto_tienda{  /*se refiere al texto que explica los servicios que uno tiene*/
+   
+     margin-right:20px;
+     width:20%;
+     text-align: justify;/*al profesor no le gusta los textos justificados porque considera que se ven mal*/
+
+   }
+
+
+      .texto_tienda img{/*se refiere al texto queda titulo al mapa*/
+         
+        width: 200px;/**/
+
+      }
+    
+    
+  
+
+   </style>
+<script>
+ var aviso= prompt("Bienvenido a nuestra página");
+document.write(aviso);
+
+
+
+</script>
+   </head>
+ 
+<body>
+   <header> <!--significa cabezera, se coloca dentro de la etiqueta body   al inicio de la misma, se puede poner varios header dentro del <body> --> 
+   <div> <!-- es contenedor de contenido -->
+      <img src="" alt="">
+   </div>
+    
+   <div>
+      <h1 class= "titulo">PRACTICA DE MARKETING</h1>
+   </div>
+  </header>
+   <main> <!-- dentro de esta etiqueta se coloca los contenidos más importantes-->
+   <div class="contenedor"> <!--es un contenedor de informacion lo colocamos en este caso dentro de main con una etiqueta <hi></h1>-->
+                         <!--dentro de la etiqueta de inicio de <div> colocamos una (class="contendor")-->
+          <div class="producto1"> <!--dentro del <div class"contenedor"></div> colocamos otro <div class"producto1"></div>-->
+                     <h2>producto1</h2>
+       <!-- <h2>producto1</h2> <!-dentro del<div class"producto1"></div> colocamos el nombre del producto o servicio1 con <h2></h2> -->
+         
+         <img src="cetteup-Geh-r9A4RBg-unsplash.jpg" alt="" class="foto_producto">
+       
+           </div>
+
+
+
+
+      <!--</div>< este estructura del <div= class"contenedor></div> y todo el contenido en su interior lo copiamos tantas veces como n° de productos tengamos -->
+   
+      <!--<div class="contenedor"> <!es un contenedor de informacion lo colocamos en este caso dentro de main con una etiqueta <hi></h1>-->
+      <!--dentro de la etiqueta de inicio de <div> colocamos una (class"contendor")-->
+    
+   <div class="producto2">       
+
+      <h2>producto2</h2>
+      <img src="david-zieglgansberger--M_J7gGTg6k-unsplash.jpg" alt="" class="foto_producto">
+   </div>
+
+   <!--dentro de la etiqueta de inicio de <div> colocamos una (class"contendor")-->
+
+    <div class="producto3">       
+
+      <h2>producto3</h2>
+    <img src="artiom-vallat-E-aq2mEw56k-unsplash.jpg" alt="" class="foto_producto">  <!--dentro de la etiqueta img colocamos una class"foto_producto"-->
+</div>  
+
+
+        <!--<div class="contenedor"> <-es un contenedor de informacion lo colocamos en este caso dentro de main con una etiqueta <hi></h1>-->
+        <!--dentro de la etiqueta de inicio de <div> colocamos una (class"contendor")-->
+   
+     <div class="producto4">       
+
+    <h2>producto4</h2>
+      <img src="photo-1504328345606-18bbc8c9d7d1.jfif" alt="" class="foto_producto">
+      
+      
+   </div >
+
+
+
+</div>
+
+
+ <div class="tienda_stgo"><!--colocamos un div class="tienda_stago" en la etiqueta de inicio , entre este div colocamos un nuevo <div class="texto_tienda"-->
+ 
+    <div class="texto_tienda"> <!--este div class ="texto_tienda" lo colocamos dentro el div class="tienda_stgo" es importante tener en cuenta que debemos hacer el div dentro del otro porque sino en vez de posicionarse el mapa en la parte inferior en el main se ubicaría al lado de las fotos-->
+
+     <!--entre la etiqueta de inicio  <div class="texto_tienda"> y la etiqueta de cierre colocamos TEXTO, luego la cambiamos por NUESTRA TIENDA lo ubicamos dentro de una etiqueta<h3></h3> -->
+     
+<!--ocupamos cualquier imagen para explicar el concepto-->
+      
+    <h3> NUESTRA TIENDA </h3> <!--Dentro de la etiqueta<H3> colocamos un titulo llamado NUESTRA TIENDA-->
+   
+
+    <div><!--al poner el parrafo dentro de un  div de inicio y cierre el texto y el mapa quedan uno al lado del otor-->
+      <img src= "natalino-d-amato-sRVZXTNnLX4-unsplash.jpg" alt=""><!--para que la foto se vea debo ponerle la extensión.jpg ademas colocarlo dentro del div-->
+      <details>    <!--si quiero colocarle detalles de refiere a una referencia o explicacion a la imagen utilizo la etiqueta <details></details>-->
+                   <!--aparece un icono details y cuando se clicea aparece el texto explicativo-->
+      <P>En nuestra tienda ofrecemos servicios de arreglos <br>
+       entre los cuales se encuentran:<br> colocacíon de cerámicas <br>radiel reconversion de bañadera a shower</P>
+      </details><!--se ubica en el codigo debajo de la etiqueta <img src="" alt"-->
+    </div>
+</div><!-- -->
+
+
+   <div class="direccion"><!--colocamos un un div class="direccion en la etiqueta de inicio" y entre la etiqueta de incio y cierre colocamos <iframe>-->
+     <div class="mapa"><!--<div class="mapa">lo puse entre la etiqueta de inicio del  <div class="direccion"> y la etiqueta de cierre </div>-->
+      <h3> MAPA DE LA TIENDA</h3><!--dentro de las etiquetas<h3> colocamos el texto del titulo de la imagen del mapa-->
+      
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.2926159353087!2d-70.65177548480084!3d-33.44168218077642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a1130c7bc9%3A0x922c7047c9cf03e7!2sCorfo%20%7C%20Corporaci%C3%B3n%20de%20Fomento%20de%20la%20Producci%C3%B3n!5e0!3m2!1ses!2scl!4v1631582880302!5m2!1ses!2scl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+   
+      </div>
+   </div>
+   </main>
+
+
+ <footer>
+    <div class="logo_sitio"><!--colocamos el contenedor para escribir logo, dentro del div colocamos una class="logo"-->
+
+        <img src="LogoMakr-0pFLU5.png"> <!--colocamos entre comillas el codigo del logo con la extension .png-->
+     <!-- <h1>logo</h1>-->
+    <!--debajo de la imagen del logo colocamos un link como demostracion lo vincula utilizando un ancla <a href=""> con la pagina de innvocien cada vez que se clicea el texto logotipo logo, lo vincula con la pagina de innovacien-->
+      <a href="https://innovacien.org" target="_blank"img src="LogoMakr-0pFLU5.png"></a> <!--esto lo explicó para aprender a vincular las imagenes de redes sociales con redes sociales ppdicha -->
+        <!--al llevarnos a otra página nos saca de nuestra página web para evitar esto, colocamos target al final del atributo de inicio a-->
+        <!--la funcion de target=_blank, es abrir una nueva pestaña donde se visualiza la pagina a la que nos vincula pero sigo dentro de la pagina-->
+        <!--luego cambiamos la palabra logo por el codigo de la imagen ,esto nos permite que al dar clic en la de la  casa nos lleva a la pagina de innovacien-->
+       </div>
+     
+    <div class="redes_sociales"> <!--colocamos otro contenedor div con una class="redes sociales" para escribir redes sociales luego en CSS llamamos a la clase.redes_sociales-->
+                                    <!--ela etiqueta de cierre hay que colocarla al final para que afecte a todas las redes_sociales sino no funcionara en CSS display:flex;-->
+         
+         
+       <div> <!--contenedor o caja o bloque-->
+         
+             <a href="https://instagram.com/innovacien" target="_blank"img src="instagram.png"><!--utilizamos un atributo a para vincular con instagram.com dentro de las etiqueta de inicio de <a>< y entre las etiquetas<a></a> se debe colocar el codigo de la imagen -->
+        <!---si solo pongo instagram.com me envia a la pagina de instagram pero si quiero que me envíe a un determinada instagram el mio seguido de instagram coloco / innovacien -->
+                 <img src="instagram.png"alt="" srcset=""class="tamaño_redes_sociales"> <!--primero colocamos solo la imagen o foto y luego se agrega el vinculo arriba descripto-->
+             </a>
+
+         <!--<h1>redes sociales</h1>-->
+       
+         </div> 
+
+       
+      
+       
+      <div> 
+         <a href="https://facebook.com"target="_blank">
+             <img src="facebook.png"alt="" srcset=""class="tamaño_redes_sociales">  <!--nos redirecciona con la página de facebook y nos solicita datos para entrar--> 
+         </a>
+               <!--colocamos otro contenedor div para escribir redes sociales, le damos una class="tamaño_redes_sociales"--> <!---->
+
+               <!--<h1>redes sociales</h1> solo lo utilizamos cuando todavia no hemos creado el logo-->
+       
+      </div>
+
+
+      <div>     <!--colocamos otro contenedor div para escribir redes sociales-->
+                 
+               <a href="htpps://wa.me/5611111111111/" target="_blank"><!-- en whatsapp no pasa lo mismo cuando queremos hacer un enlace directo luego de wa.me/colocamos el numero de telefono+56333333333 hay que tener encunenta sin el signo+ y sin espacios entre los numeros-->
+                   <img src="whatsapp.png"alt="" srcset=""class="tamaño_redes_sociales">
+                  </a>
+      </div>
+   </div><!--este etiqueta de cierre corresponde al div class="redes_sociales, debe colocarse aquí para que funcione en CSS el display: flex;"-->
+  </footer>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
